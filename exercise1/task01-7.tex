@@ -16,8 +16,10 @@ Read image \texttt{portrait.png} into an array \texttt{arrF}. Then ---without us
 %%%%%
 %%%%%
 \begin{python}
-# paste your code here
+xx, yy = np.meshgrid(range(arrF.shape[0]), range(arrF.shape[1]), indexing='ij')
 
+arrG = np.where((xx % (radius * 2) - radius)**2 + (yy % (radius * 2) - radius)**2 \\
+				< radius**2, arrF, 255)
 \end{python}
 %%%%%
 %%%%%
@@ -35,7 +37,7 @@ Perform runtime measurements for your code and paste your result here. (When imp
 %%%%% enter your result here
 %%%%%
 %%%%%
-enter your result here \ldots
+The computation took $3.15472 \cdot 10^{-9}$ seconds.
 %%%%%
 %%%%%
 %%%%%
@@ -53,8 +55,8 @@ Finally, enter your resulting images (for $r \in \{ 16, 64 \}$) here
 %%%%%
 %%%%%
 \begin{center}
-\includegraphics[width=0.45\textwidth]{placeholder.pdf} \hfill
-\includegraphics[width=0.45\textwidth]{placeholder.pdf} 
+\includegraphics[width=0.45\textwidth]{t7-16.png} \hfill
+\includegraphics[width=0.45\textwidth]{t7-64.png} 
 \end{center}
 %%%%%
 %%%%%

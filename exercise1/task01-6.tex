@@ -8,8 +8,8 @@ Read image \texttt{portrait.png} into an array \texttt{arrF}. Then ---without us
 %%%%%
 %%%%%
 \begin{python}
-# paste your code here
-
+xx, yy = np.meshgrid(range(arrF.shape[0]), range(arrF.shape[1]), indexing='ij')
+arrF[((xx - 128) / 50)**2 + ((yy - 110) / 85)**2 < 1] = 255
 \end{python}
 %%%%%
 %%%%%
@@ -27,7 +27,7 @@ To illustrate how your resulting image should look like, here is the result you 
 %%%%%
 %%%%%
 \begin{center}
-\includegraphics[width=0.5\textwidth]{t1-6.png} 
+\includegraphics[width=0.5\textwidth]{myt1-6.png} 
 \end{center}
 %%%%%
 %%%%%
