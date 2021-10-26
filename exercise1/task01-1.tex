@@ -74,7 +74,9 @@ Does the result you obtain from \keyword{embossV4} differ from the results produ
 %%%%% enter your discussion here
 %%%%%
 %%%%%
-enter your discussion here \ldots
+Only the images obtained by applying \keyword{embossV1} and \keyword{embossV2} are the same. These to methods pad the outermost pixel rows and columns where there is no gradient to be computed with zeros, so the image keeps its original size but gets a black one pixel wide frame. \\
+\keyword{embossV3} does not change the image size either, but pads the outer pixels with the second outermost pixels. \\
+In contrast, \keyword{embossV4} does not employ any kind of padding, but instead discards the outer pixels, so the resulting image is shrunk by two pixels in both width and height.
 %%%%%
 %%%%%
 %%%%%
