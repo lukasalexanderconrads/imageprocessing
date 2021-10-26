@@ -32,7 +32,10 @@ Read it into an array \texttt{arrF}, print its shape, and run the above timing s
 %%%%% enter your result here
 %%%%%
 %%%%%
-enter your result here \ldots
+V1: 0.44967310061001625 \\
+V2: 0.0007028839599661297 \\
+V3: 0.0012256227100078832 \\
+V4: 0.00038784879998274844 \\
 %%%%%
 %%%%%
 %%%%%
@@ -51,7 +54,10 @@ Read it into an array \texttt{arrF}, print its shape, and run the above timing s
 %%%%% enter your result here
 %%%%%
 %%%%%
-enter your result here \ldots
+V1: 2.5130979724999998 \\
+V2: 0.011546289530015201 \\
+V3: 0.011558454990008613 \\
+V4: 0.005792928150003718 \\
 %%%%%
 %%%%%
 %%%%%
@@ -67,7 +73,7 @@ enter your result here \ldots
 %%%%% enter your discussion here
 %%%%%
 %%%%%
-enter your discussion here \ldots
+The functions called on the second image take about 5.5 times longer, since the image has that much more pixels. The most noteworthy difference is between the first method and the others. The first takes far longer because it uses a python loop to iterate over all pixels, which are very slow compared to more low level programming languages. Meanwhile, numpy and scipy functions, like subtracting two arrays in methods 2 and 4, or the correlate function in 3, are implemented in C, where large loops are much faster.
 %%%%%
 %%%%%
 %%%%%
