@@ -19,10 +19,10 @@ Create such images for $\nu \in \{ 1, 2, 3, 9 \}$ and paste them here
 %%%%%
 %%%%%
 \begin{center}
-\includegraphics[width=0.24\textwidth]{placeholder.pdf} \hfill
-\includegraphics[width=0.24\textwidth]{placeholder.pdf} \hfill
-\includegraphics[width=0.24\textwidth]{placeholder.pdf} \hfill
-\includegraphics[width=0.24\textwidth]{placeholder.pdf} 
+\includegraphics[width=0.24\textwidth]{t8-1.png} \hfill
+\includegraphics[width=0.24\textwidth]{t8-2.png} \hfill
+\includegraphics[width=0.24\textwidth]{t8-3.png} \hfill
+\includegraphics[width=0.24\textwidth]{t8-5.png} 
 \end{center}
 %%%%%
 %%%%%
@@ -40,7 +40,9 @@ Also, paste your code here \\[1ex]
 %%%%%
 %%%%%
 \begin{python}
-# paste your code here
+def f(nu, M=256, N=256):
+    xx, yy = np.meshgrid(range(M), range(N), indexing='xy')
+    return .5 * (np.sin(2 * np.pi * nu * xx / (N - 1) + .5 * np.pi * (N - 1)) + 1) * 255
 
 \end{python}
 %%%%%
