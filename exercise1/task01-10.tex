@@ -14,10 +14,10 @@ Choose $\nu \in \{ 0.5, 1.0, 1.5, 2.0 \}$, apply your method to \texttt{portrait
 %%%%%
 %%%%%
 \begin{center}
-\includegraphics[width=0.24\textwidth]{placeholder.pdf} \hfill
-\includegraphics[width=0.24\textwidth]{placeholder.pdf} \hfill
-\includegraphics[width=0.24\textwidth]{placeholder.pdf} \hfill
-\includegraphics[width=0.24\textwidth]{placeholder.pdf} 
+\includegraphics[width=0.24\textwidth]{t10-0.5.png} \hfill
+\includegraphics[width=0.24\textwidth]{t10-1.png} \hfill
+\includegraphics[width=0.24\textwidth]{t10-1.5.png} \hfill
+\includegraphics[width=0.24\textwidth]{t10-2.png} 
 \end{center}
 %%%%%
 %%%%%
@@ -35,8 +35,9 @@ Also, paste your code here \\[1ex]
 %%%%%
 %%%%%
 \begin{python}
-# paste your code here
-
+def transform(arrF, nu):
+    arrG = np.cos(arrF * nu * 2 * np.pi / 255) * 127.5 + 127.5
+    return arrG
 \end{python}
 %%%%%
 %%%%%
